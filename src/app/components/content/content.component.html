@@ -1,2 +1,18 @@
-<p>content works!</p>
+<div #input class="job-offers" >
+  <app-offers *ngFor="let offer of offersList" [offer]="offer"></app-offers>
 
+  <nav class="pages" aria-label="...">
+      <ul class="pagination">
+        <li class="page-item ">
+          <button class="page-link" style="width: 100px; text-align: center;" (click)="PreviousPage()">Previous</button>
+        </li>
+
+        <li class="page-item disabled"><a class="page-link" href="#">{{page}}</a></li>
+
+        <li class="page-item" >
+          <button class="page-link" style="width: 100px; text-align: center;" (click)="NextPage()">Next</button>
+        </li>
+      </ul>
+    </nav>
+
+</div>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { GetDataService } from 'src/app/services/get-data.service';
+import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -7,20 +8,62 @@ import { Observable } from 'rxjs';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
+
 export class ContentComponent implements OnInit {
 
-  users: string[] = [];
+  loading: boolean = false;
 
-  constructor(public http: HttpClient) { }
+  data: any;
+  offersList: any;
+  @ViewChild('select') select!: ElementRef;
+  selectedLevel: string = "all";
+  page: number = 1;
+
+  constructor(public service: GetDataService) { }
 
   ngOnInit(): void {
-    this.loadUsers();
+    this.jobs();
   }
 
-  loadUsers(): void{
-    this.http.get('https://www.themuse.com/api/public/jobs?page=1').subscribe(res => {
-      console.log(res);
+  jobs(): void {
+    this.service.getJobs(this.page).subscribe((res: any) => {
+      this.data = res;
+      this.offersList = this.data.results;
     });
   }
 
+  changeLevel(level_page: number) {
+    this.page = level_page;
+    this.selectedLevel = this.select.nativeElement.value;
+    this.service.getLevel(this.selectedLevel, this.page).subscribe((res: any) => {
+      this.data = res;
+      this.offersList = this.data.results;
+    });
+  }
+
+  NextPage(){
+
+    this.page = this.page + 1;
+
+    if (this.selectedLevel == "all"){
+      this.jobs();
+    }else{
+      this.changeLevel(this.page);
+    }
+
+  }
+
+  PreviousPage(){
+
+    if(this.page > 1){
+      this.page = this.page - 1;
+
+      if (this.selectedLevel == "all"){
+        this.jobs();
+      }else{
+        this.changeLevel(this.page);
+      }
+    }
+
+  }
 }
