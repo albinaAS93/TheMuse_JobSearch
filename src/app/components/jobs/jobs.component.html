@@ -1,0 +1,9 @@
+<div *ngIf="job" (click)="jobDetailInfo()" [routerLink]="['/job-info']" class="card my-3 text-center w-75">
+  <div class="card-header ">
+    <p class="card-text">{{job.levels[0] ? job.levels[0].name : "Unknown"}}</p>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{job.name ? job.name : "Unknown"}}</h3>
+    <p class="card-text"><strong> {{job.company.name ? job.company.name : "Unknown"}} - {{job.locations[0] ? job.locations[0].name : "Unknown"}}</strong> - {{job.publication_date ? job.publication_date : "Unknown"}}</p>
+  </div>
+</div>
