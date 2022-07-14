@@ -15,6 +15,7 @@ export class GetDataService {
   }
 
   getLevel(level: string, page: number): any {
+    console.log(level);
     return this.http.get('https://www.themuse.com/api/public/jobs?category=Software%20Engineering&level=' + level +'&page=' + page);
   }
 

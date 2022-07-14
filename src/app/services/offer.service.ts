@@ -11,9 +11,8 @@ export class OfferService {
 
   constructor() { }
 
-  updateData(data: string){ //For modify dataSource
+  updateData(data: string){
     this.dataSource.next(data);
   }
-
 
 }

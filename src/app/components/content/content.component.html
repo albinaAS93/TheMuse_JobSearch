@@ -1,3 +1,16 @@
+<div class="container justify-content-center">
+
+  <label for="job-list" class="text-secondary mb-3 mb-xs-0" >Select Job Level</label>
+  <select class="form-select p-3" id="level" name="level" (change)="changeLevel(1)" #select>
+    <option value="all" selected>All</option>
+    <option value="Internship">Internship</option>
+    <option value="Entry Level">Entry Level</option>
+    <option value="Mid Level">Mid Level</option>
+    <option value="Senior Level">Senior Level</option>
+  </select>
+
+</div>
+
 <div #input class="job-offers" >
   <app-offers *ngFor="let offer of offersList" [offer]="offer"></app-offers>
 

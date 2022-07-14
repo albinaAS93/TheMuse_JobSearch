@@ -7,7 +7,6 @@ import { CompanyDetailsComponent } from './components/company-details/company-de
 
 const routes: Routes = [
   {path: '', component: ContentComponent},
-  {path: 'dashboard', component: ContentComponent},
   {path: 'job-description', component: JobDescriptionComponent},
   {path: 'company-details', component: CompanyDetailsComponent}
 ];

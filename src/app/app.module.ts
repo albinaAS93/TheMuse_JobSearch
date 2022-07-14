@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ContentComponent } from './components/content/content.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { JobDescriptionComponent } from './components/job-description/job-description.component';
@@ -17,7 +16,6 @@ import { CompanyDetailsComponent } from './components/company-details/company-de
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent,
     ContentComponent,
     OffersComponent,
     JobDescriptionComponent,

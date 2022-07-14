@@ -12,7 +12,6 @@ export class CompanyDetailsComponent implements OnInit {
   offer: any;
   offerId!: string;
   companyData: any;
-  company: any;
 
   constructor(
     private offerService: OfferService,
@@ -23,7 +22,7 @@ export class CompanyDetailsComponent implements OnInit {
 
     this.offerService.currentData.subscribe((e) => {
       this.offer = e;
-      this.offerId = this.company.id;
+      this.offerId = this.offer.company.id;
     })
 
     this.dataService.getCompany(this.offerId).subscribe((res: any) => {

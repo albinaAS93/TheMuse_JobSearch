@@ -1,8 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GetDataService } from 'src/app/services/get-data.service';
-import {HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs';
-
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -35,6 +32,8 @@ export class ContentComponent implements OnInit {
   changeLevel(level_page: number) {
     this.page = level_page;
     this.selectedLevel = this.select.nativeElement.value;
+
+
     this.service.getLevel(this.selectedLevel, this.page).subscribe((res: any) => {
       this.data = res;
       this.offersList = this.data.results;
