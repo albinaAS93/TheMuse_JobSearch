@@ -1,6 +1,6 @@
-<div class="container justify-content-center">
+<div class="container justify-content-center my-4 w-60">
 
-  <label for="job-list" class="text-secondary mb-3 mb-xs-0" >Select Job Level</label>
+  <label for="job-list" class="lbl text-secondary mb-1" >Select Job Level</label>
   <select class="form-select p-3" id="level" name="level" (change)="changeLevel(1)" #select>
     <option value="all" selected>All</option>
     <option value="Internship">Internship</option>
@@ -11,11 +11,12 @@
 
 </div>
 
-<div #input class="job-offers" >
+<div #input class="job-offers container justify-content-center">
+
   <app-offers *ngFor="let offer of offersList" [offer]="offer"></app-offers>
 
-  <nav class="pages" aria-label="...">
-      <ul class="pagination">
+  <div class="pages" aria-label="...">
+      <ul class="pagination my-3">
         <li class="page-item ">
           <button class="page-link" style="width: 100px; text-align: center;" (click)="PreviousPage()">Previous</button>
         </li>
@@ -26,6 +27,6 @@
           <button class="page-link" style="width: 100px; text-align: center;" (click)="NextPage()">Next</button>
         </li>
       </ul>
-    </nav>
+    </div>
 
 </div>

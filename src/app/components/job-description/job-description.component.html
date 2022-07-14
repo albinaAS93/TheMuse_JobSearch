@@ -1,4 +1,4 @@
-<div class="container job-desc" >
+<div class="container job-desc my-2 text-justify">
 
   <div class="info_header">
       <div class="info_header_title">
@@ -11,14 +11,14 @@
               <p class=""> {{offer.locations[0] ? offer.locations[0].name : "Unknown"}} </p>
           </div>
 
-          <button [routerLink]="['/company-details']" ><i class="fa-solid fa-circle-info"></i></button>
+          <button class="btn btn-primary my-2" [routerLink]="['/company-details']">Company Details</button>
       </div>
   </div>
 
-  <div class=" container description"  >
+  <div class="container description">
       <p *ngIf="offer" [innerHTML]="offer.contents"></p>
   </div>
 
-  <button type="button" class="btn btn-primary back-button" [routerLink]="['']">Close</button>
+  <button type="button" class="btn btn-primary" [routerLink]="['']">Close</button>
 
 </div>
