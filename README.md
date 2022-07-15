@@ -33,5 +33,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <a href="https://github.com/albinaAS93/TheMuse_JobSearch">TheMuse Job Search - Github Repository</a>
 
 ## Firebase
-<a href="https://progetto-angular-1.web.app/>TheMuse Job Search deployed with Firebase </a>
+<a href="https://progetto-angular-1.web.app/">TheMuse Job Search deployed with Firebase </a>
 
