@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/the-muse-job-search/",
     "ignore": [
       "firebase.json",
       "**/.*",
