@@ -1,4 +1,4 @@
-# TheMuseJobSearch
+# TheMuse Job Search
 
 First, you must install the npm by using npm install in command line.
 
