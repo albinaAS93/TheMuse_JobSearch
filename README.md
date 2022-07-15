@@ -1,5 +1,7 @@
 # TheMuseJobSearch
 
+First, you must install the npm by using npm install in command line.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
 ## Development server
@@ -25,3 +27,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Github
+<a href="https://github.com/albinaAS93/TheMuse_JobSearch">TheMuse Job Search - Github Repository</a>
+
+## Firebase
+<a href="https://progetto-angular-1.web.app/>TheMuse Job Search deployed with Firebase </a>
+
